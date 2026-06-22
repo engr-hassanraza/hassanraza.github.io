@@ -6,108 +6,225 @@
 
 <title>Hassan Raza | AI/ML Engineer</title>
 
-<meta name="description" content="Hassan Raza - AI/ML Engineer, Software Engineering Student at QUEST University">
-
 <style>
 body{
   margin:0;
-  font-family:Arial,sans-serif;
-  background:#0f172a;
+  font-family:Arial;
+  background:linear-gradient(135deg,#0f172a,#020617);
   color:white;
+  text-align:center;
 }
 
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:15px 10%;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  position:sticky;
+  top:0;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 10px;
+}
+
+/* HERO */
 .hero{
   padding:80px 20px;
-  text-align:center;
-  background:linear-gradient(135deg,#0f172a,#1e3a8a);
 }
 
-.btn{
-  display:inline-block;
-  padding:12px 20px;
-  margin:8px;
-  border-radius:8px;
-  background:#38bdf8;
-  color:#000;
-  text-decoration:none;
-  font-weight:bold;
+.hero img{
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  border:3px solid #38bdf8;
+  object-fit:cover;
+  animation:float 3s ease-in-out infinite;
 }
 
-.section{
-  max-width:1000px;
+@keyframes float{
+  0%{transform:translateY(0px);}
+  50%{transform:translateY(-10px);}
+  100%{transform:translateY(0px);}
+}
+
+h1{
+  font-size:45px;
+  margin:10px 0;
+  background:linear-gradient(90deg,#38bdf8,#a78bfa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+h3{
+  color:#38bdf8;
+}
+
+/* typing effect */
+.typing{
+  overflow:hidden;
+  border-right:2px solid white;
+  white-space:nowrap;
+  animation:typing 4s steps(40,end), blink 0.8s infinite;
+  width:0;
   margin:auto;
-  padding:40px 20px;
 }
 
+@keyframes typing{
+  from{width:0}
+  to{width:100%}
+}
+
+@keyframes blink{
+  50%{border-color:transparent}
+}
+
+/* BUTTONS */
+.btn a{
+  display:inline-block;
+  margin:10px;
+  padding:10px 15px;
+  background:linear-gradient(90deg,#38bdf8,#6366f1);
+  color:black;
+  font-weight:bold;
+  text-decoration:none;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+.btn a:hover{
+  transform:scale(1.1);
+}
+
+/* SECTION */
+section{
+  padding:60px 10%;
+}
+
+/* CARDS */
 .card{
-  background:#1e293b;
+  background:rgba(255,255,255,0.05);
   padding:20px;
+  margin:15px auto;
   border-radius:12px;
-  margin:15px 0;
+  max-width:600px;
+  backdrop-filter:blur(10px);
+  transition:0.3s;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:15px;
+.card:hover{
+  transform:scale(1.05);
+  background:rgba(56,189,248,0.1);
 }
 
-h1,h2{margin:0 0 10px 0;}
+/* SKILLS */
+.skills span{
+  display:inline-block;
+  margin:5px;
+  padding:8px 12px;
+  background:#1e293b;
+  border-radius:8px;
+}
+
+/* FOOTER */
+footer{
+  padding:20px;
+  background:#0b1220;
+  margin-top:30px;
+}
 </style>
-
 </head>
 
 <body>
 
-<div class="hero">
+<!-- NAV -->
+<nav>
+  <div><b>Hassan Raza</b></div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+
+  <img src="profile.jpg" alt="Hassan Raza">
+
   <h1>Hassan Raza</h1>
-  <h3>AI/ML Engineer | Data Science | Deep Learning</h3>
-  <p>Final Year Software Engineering Student at QUEST University</p>
+  <h3>AI/ML Engineer | Final Year Student</h3>
 
-  <a class="btn" href="https://github.com/">GitHub</a>
-  <a class="btn" href="#">LinkedIn</a>
-</div>
+  <p class="typing">
+    Building Intelligent Systems with AI, ML & Deep Learning...
+  </p>
 
-<div class="section">
+  <p>
+    Final year Software Engineering student from QUEST Nawabshah,
+    passionate about Artificial Intelligence, Machine Learning,
+    and real-world AI applications.
+  </p>
 
-  <div class="card">
-    <h2>About Me</h2>
-    <p>I am an AI/ML Engineer passionate about Machine Learning, Deep Learning, Computer Vision, and Data Science.</p>
+  <div class="btn">
+    <a href="https://www.linkedin.com/in/hassan-raza-ds" target="_blank">LinkedIn</a>
+    <a href="https://hassanraza.github.io" target="_blank">Portfolio</a>
+    <a href="https://github.com/" target="_blank">GitHub</a>
   </div>
 
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="skills">
+    <span>Python</span>
+    <span>Machine Learning</span>
+    <span>Deep Learning</span>
+    <span>TensorFlow</span>
+    <span>Flask</span>
+    <span>Docker</span>
+    <span>SQL</span>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
   <h2>Projects</h2>
 
-  <div class="grid">
-
-    <div class="card">
-      <h3>Plant Disease Detection</h3>
-      <p>TensorFlow + Flask + Docker based AI system.</p>
-    </div>
-
-    <div class="card">
-      <h3>AI Chatbot</h3>
-      <p>RAG system using LangChain and FAISS.</p>
-    </div>
-
-    <div class="card">
-      <h3>Traffic Sign Recognition</h3>
-      <p>CNN model with high accuracy.</p>
-    </div>
-
-    <div class="card">
-      <h3>Power BI Dashboard</h3>
-      <p>Business analytics dashboard with SQL pipeline.</p>
-    </div>
-
+  <div class="card">
+    🌿 Plant Disease Detection System (CNN + TensorFlow + Flask)
   </div>
 
   <div class="card">
-    <h2>Contact</h2>
-    <p>Email: hassanrz503@gmail.com</p>
-    <p>Location: Pakistan</p>
+    🤖 AI Chatbot using RAG (LangChain + LLMs)
   </div>
 
-</div>
+  <div class="card">
+    📊 Kaggle ML Models (Classification & Prediction)
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+
+  <div class="card">
+    📧 hassan@example.com <br><br>
+
+    <a href="https://www.linkedin.com/in/hassan-raza-ds">LinkedIn</a> |
+    <a href="https://github.com/">GitHub</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Hassan Raza | AI/ML Engineer
+</footer>
 
 </body>
 </html>
