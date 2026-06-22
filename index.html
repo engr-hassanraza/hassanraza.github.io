@@ -12,7 +12,6 @@ body{
   font-family:Arial;
   background:linear-gradient(135deg,#0f172a,#020617);
   color:white;
-  text-align:center;
 }
 
 /* NAV */
@@ -34,75 +33,71 @@ nav a{
 
 /* HERO */
 .hero{
-  padding:80px 20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  padding:80px 10%;
+  gap:40px;
 }
 
 .hero img{
-  width:160px;
-  height:160px;
+  width:220px;
+  height:220px;
   border-radius:50%;
-  border:3px solid #38bdf8;
+  border:4px solid #38bdf8;
   object-fit:cover;
-  animation:float 3s ease-in-out infinite;
+  box-shadow:0 0 30px rgba(56,189,248,0.5);
 }
 
-@keyframes float{
-  0%{transform:translateY(0px);}
-  50%{transform:translateY(-10px);}
-  100%{transform:translateY(0px);}
+.hero-text{
+  max-width:600px;
 }
 
-h1{
+.hero-text h1{
   font-size:45px;
-  margin:10px 0;
+  margin:0;
   background:linear-gradient(90deg,#38bdf8,#a78bfa);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
-h3{
+.hero-text h3{
   color:#38bdf8;
+  margin-top:10px;
 }
 
-/* typing effect */
-.typing{
-  overflow:hidden;
-  border-right:2px solid white;
-  white-space:nowrap;
-  animation:typing 4s steps(40,end), blink 0.8s infinite;
-  width:0;
-  margin:auto;
-}
-
-@keyframes typing{
-  from{width:0}
-  to{width:100%}
-}
-
-@keyframes blink{
-  50%{border-color:transparent}
+.hero-text p{
+  color:#cbd5e1;
+  line-height:1.6;
 }
 
 /* BUTTONS */
 .btn a{
   display:inline-block;
-  margin:10px;
+  margin:10px 10px 0 0;
   padding:10px 15px;
-  background:linear-gradient(90deg,#38bdf8,#6366f1);
+  background:#38bdf8;
   color:black;
-  font-weight:bold;
   text-decoration:none;
   border-radius:8px;
+  font-weight:bold;
   transition:0.3s;
 }
 
 .btn a:hover{
-  transform:scale(1.1);
+  transform:scale(1.05);
 }
 
-/* SECTION */
+/* SECTIONS */
 section{
   padding:60px 10%;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:30px;
+  color:#38bdf8;
 }
 
 /* CARDS */
@@ -110,31 +105,36 @@ section{
   background:rgba(255,255,255,0.05);
   padding:20px;
   margin:15px auto;
+  max-width:700px;
   border-radius:12px;
-  max-width:600px;
   backdrop-filter:blur(10px);
   transition:0.3s;
 }
 
 .card:hover{
-  transform:scale(1.05);
+  transform:scale(1.03);
   background:rgba(56,189,248,0.1);
 }
 
 /* SKILLS */
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+}
+
 .skills span{
-  display:inline-block;
-  margin:5px;
-  padding:8px 12px;
   background:#1e293b;
+  padding:10px 15px;
   border-radius:8px;
 }
 
 /* FOOTER */
 footer{
+  text-align:center;
   padding:20px;
   background:#0b1220;
-  margin-top:30px;
 }
 </style>
 </head>
@@ -155,25 +155,32 @@ footer{
 <!-- HERO -->
 <section id="home" class="hero">
 
-  <img src="profile.jpg" alt="Hassan Raza">
+  <!-- IMAGE FIX SAFE -->
+  <img src="./profile.jpg" alt="Hassan Raza">
 
-  <h1>Hassan Raza</h1>
-  <h3>AI/ML Engineer | Final Year Student</h3>
+  <div class="hero-text">
 
-  <p class="typing">
-    Building Intelligent Systems with AI, ML & Deep Learning...
-  </p>
+    <h1>Hassan Raza</h1>
+    <h3>AI/ML Engineer | Final Year Student</h3>
 
-  <p>
-    Final year Software Engineering student from QUEST Nawabshah,
-    passionate about Artificial Intelligence, Machine Learning,
-    and real-world AI applications.
-  </p>
+    <p>
+      Final year Software Engineering student from QUEST Nawabshah,
+      passionate about Artificial Intelligence, Machine Learning,
+      Deep Learning, and real-world AI systems.
+    </p>
 
-  <div class="btn">
-    <a href="https://www.linkedin.com/in/hassan-raza-ds" target="_blank">LinkedIn</a>
-    <a href="https://hassanraza.github.io" target="_blank">Portfolio</a>
-    <a href="https://github.com/" target="_blank">GitHub</a>
+    <p>
+      🎓 QUEST Nawabshah <br>
+      📍 Matiari, Sindh, Pakistan <br>
+      📅 Final Year Student
+    </p>
+
+    <div class="btn">
+      <a href="https://www.linkedin.com/in/hassan-raza-ds">LinkedIn</a>
+      <a href="https://hassanraza.github.io">Portfolio</a>
+      <a href="https://github.com/">GitHub</a>
+    </div>
+
   </div>
 
 </section>
@@ -190,6 +197,7 @@ footer{
     <span>Flask</span>
     <span>Docker</span>
     <span>SQL</span>
+    <span>Data Analysis</span>
   </div>
 </section>
 
@@ -206,8 +214,9 @@ footer{
   </div>
 
   <div class="card">
-    📊 Kaggle ML Models (Classification & Prediction)
+    📊 Kaggle Machine Learning Models
   </div>
+
 </section>
 
 <!-- CONTACT -->
@@ -220,6 +229,7 @@ footer{
     <a href="https://www.linkedin.com/in/hassan-raza-ds">LinkedIn</a> |
     <a href="https://github.com/">GitHub</a>
   </div>
+
 </section>
 
 <footer>
