@@ -90,7 +90,7 @@ nav .nav-links a:hover, nav .nav-links a.active {
   margin-bottom: 40px;
 }
 
-/* Massive Bold Typography like Reference */
+/* Massive Bold Typography */
 .massive-title {
   font-size: clamp(40px, 6vw, 75px);
   font-weight: 900;
@@ -176,7 +176,7 @@ nav .nav-links a:hover, nav .nav-links a.active {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
 }
 
@@ -243,14 +243,14 @@ footer {
     flex-direction: column;
   }
   .hero-right {
-    height: 450px;
-    order: -1; /* Image goes to top on mobile */
+    height: 480px;
+    order: -1;
   }
   .hero-left {
-    padding: 50px 5%;
+    padding: 60px 5%;
   }
   nav .nav-links {
-    display: none; /* Simplification for mobile */
+    display: none;
   }
 }
 </style>
@@ -262,7 +262,6 @@ footer {
   <div class="logo">H.RAZA</div>
   <div class="nav-links">
     <a href="#home" class="active">Home</a>
-    <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
@@ -302,7 +301,8 @@ footer {
 
   <!-- Right Side Edge-to-Edge Image -->
   <div class="hero-right">
-    <img src="hassan photo.jpg" alt="Hassan Raza">
+    <!-- Aapki nayi picture ka exact path lagaya hai -->
+    <img src="hassan photo_2.jpg" alt="Hassan Raza">
   </div>
 
 </section>
@@ -353,8 +353,9 @@ footer {
   <h2 class="section-title">Get In Touch</h2>
   <div class="card" style="max-width: 600px; margin: 0 auto; text-align: center;">
     <i class="fa-solid fa-envelope" style="font-size: 40px;"></i>
-    <h3>hassan@example.com</h3>
-    <p>Let's collaborate on AI, Machine Learning, and next-generation data solutions.</p>
+    <!-- Aapki batayi hui email ID update ho gayi hai -->
+    <h3>hassanrz503@gmail.com</h3>
+    <p style="margin-top: 15px;">Let's collaborate on AI, Machine Learning, and next-generation data solutions.</p>
   </div>
 </section>
 
