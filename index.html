@@ -1,24 +1,222 @@
-<div class="massive-title">
-  <span>Engineer.</span>
-  <span>Developer.</span>
-  <span class="light-text">AI Architect.</span>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Discover The World</title>
 
-<!-- 👇 PROFILE IMAGE ADD (THIS IS FIXED PART) -->
-<img src="profile.jpg" alt="Profile Picture" width="200">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<div class="hero-details">
-  <p>
-    Final year Software Engineering student from QUEST Nawabshah, specialized in building real-world AI systems, computer vision pipelines, and deep learning architectures.
-  </p>
-  
-  <div class="hero-meta">
-    <span class="meta-item"><i class="fa-solid fa-graduation-cap"></i> QUEST</span>
-    <span class="meta-item"><i class="fa-solid fa-location-dot"></i> Sindh, PK</span>
+<style>
+
+/* RESET */
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#fff;
+  color:#111;
+}
+
+/* NAVBAR */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
+}
+
+nav h2{
+  font-size:22px;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+
+nav ul li{
+  cursor:pointer;
+  color:#555;
+  font-size:14px;
+}
+
+/* HERO SECTION */
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:60px;
+  background:#f5f5f5;
+}
+
+.hero-text{
+  max-width:500px;
+}
+
+.hero-text h2{
+  color:#f4b400;
+  font-size:30px;
+  margin:0;
+}
+
+.hero-text h1{
+  font-size:60px;
+  margin:10px 0;
+}
+
+.hero-text p{
+  color:#666;
+  line-height:1.6;
+}
+
+.btn{
+  padding:10px 18px;
+  margin-right:10px;
+  border:none;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+.btn-primary{
+  background:#f4b400;
+  color:#fff;
+}
+
+.btn-outline{
+  border:1px solid #333;
+  background:transparent;
+}
+
+/* HERO IMAGE */
+.hero img{
+  width:420px;
+  border-radius:10px;
+}
+
+/* ICON SECTION */
+.icons{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  padding:40px;
+}
+
+.icon-box{
+  text-align:center;
+  color:#666;
+}
+
+.icon-box i{
+  font-size:24px;
+  color:#f4b400;
+  margin-bottom:5px;
+}
+
+/* WORLD SECTION */
+.world{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:60px;
+}
+
+.world img{
+  width:420px;
+}
+
+.world-text{
+  max-width:500px;
+}
+
+.world-text h2{
+  font-size:40px;
+}
+
+.world-text span{
+  color:#f4b400;
+}
+
+.world-text p{
+  color:#666;
+  line-height:1.6;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h2>Travel</h2>
+  <ul>
+    <li>Home</li>
+    <li>Destinations</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="hero-text">
+    <h2>WELCOME</h2>
+    <h1>I'M TRAVELER</h1>
+
+    <p>
+      Explore the world with modern travel experiences, amazing destinations, and unforgettable journeys.
+    </p>
+
+    <button class="btn btn-primary">READ MORE</button>
+    <button class="btn btn-outline">WATCH VIDEO</button>
   </div>
 
-  <div class="social-icons">
-    <a href="https://www.linkedin.com/in/hassan-raza-ds" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-    <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="travel">
+
+</section>
+
+<!-- ICONS -->
+<section class="icons">
+
+  <div class="icon-box">
+    <i class="fa-solid fa-plane"></i>
+    <p>Travel</p>
   </div>
-</div>
+
+  <div class="icon-box">
+    <i class="fa-solid fa-hotel"></i>
+    <p>Hotels</p>
+  </div>
+
+  <div class="icon-box">
+    <i class="fa-solid fa-map"></i>
+    <p>Guides</p>
+  </div>
+
+  <div class="icon-box">
+    <i class="fa-solid fa-earth-americas"></i>
+    <p>Explore</p>
+  </div>
+
+</section>
+
+<!-- WORLD -->
+<section class="world">
+
+  <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff" alt="world">
+
+  <div class="world-text">
+    <h2>DISCOVER THE <span>WORLD</span></h2>
+    <p>
+      Travel across countries, explore cultures, and see the beauty of nature. Create memories that last forever.
+    </p>
+
+    <button class="btn btn-primary">Explore Now</button>
+  </div>
+
+</section>
+
+</body>
+</html>
