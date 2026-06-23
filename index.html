@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hassan Raza | AI & Data Science Specialist</title>
+<title>Hassan Raza | AI Engineer Portfolio</title>
 
-<!-- External Resources for Premium Look -->
+<!-- Font Awesome & Google Fonts -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Syncopate:wght@700&display=swap" rel="stylesheet">
 
 <style>
-/* PREMIUM ATTRACIVE THEME CONFIG */
+/* 3D NEON LIGHTING THEME VARS */
 :root {
-  --bg-main: #05050a;
-  --panel-bg: rgba(13, 13, 25, 0.7);
-  --border-neon: rgba(255, 255, 255, 0.05);
-  --glow-cyan: #00f2fe;
-  --glow-pink: #9b51e0;
+  --bg-deep: #060814;
+  --panel-glass: rgba(18, 22, 43, 0.55);
+  --border-glow: rgba(255, 255, 255, 0.08);
+  --neon-cyan: #00f2fe;
+  --neon-purple: #8a2be2;
   --text-white: #ffffff;
   --text-gray: #94a3b8;
 }
@@ -28,406 +28,351 @@
 }
 
 body {
-  background-color: var(--bg-main);
+  background-color: var(--bg-deep);
   color: var(--text-white);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   overflow-x: hidden;
-  /* Premium Ambient Lighting Effects on Background */
+  perspective: 1000px; /* Enables 3D space depth */
+  /* Cyber 3D Ambient Orbs */
   background-image: 
-    radial-gradient(circle at 80% 20%, rgba(155, 81, 224, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 15% 70%, rgba(0, 242, 254, 0.1) 0%, transparent 45%);
+    radial-gradient(circle at 85% 15%, rgba(0, 242, 254, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 15% 85%, rgba(138, 43, 226, 0.15) 0%, transparent 40%);
 }
 
-h1, h2, .logo-text, .btn-action {
-  font-family: 'Cabinet Grotesk', sans-serif;
-  font-weight: 800;
-}
-
-.wrapper {
-  max-width: 1400px;
+.main-container {
+  max-width: 1350px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 40px;
 }
 
-/* SLEEK BLURRED NAVBAR */
-header {
+/* SLEEK BLURRED NAV */
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 30px 0;
 }
 
-.logo-text {
-  font-size: 24px;
-  letter-spacing: -0.5px;
-  background: linear-gradient(135deg, #fff 30%, #a5b4fc 100%);
+.logo {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #fff, var(--neon-cyan));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.logo-text span {
-  color: var(--glow-cyan);
-  -webkit-text-fill-color: initial;
-}
-
-.nav-menu {
+.nav-links {
   display: flex;
-  gap: 40px;
+  gap: 35px;
   list-style: none;
 }
 
-.nav-menu a {
+.nav-links a {
   text-decoration: none;
   color: var(--text-gray);
-  font-size: 14px;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-menu a:hover {
-  color: var(--text-white);
-}
-
-.cta-top {
-  border: 1px solid rgba(0, 242, 254, 0.4);
-  background: rgba(0, 242, 254, 0.03);
-  padding: 10px 24px;
-  border-radius: 40px;
-  color: var(--glow-cyan);
-  text-decoration: none;
   font-size: 13px;
   font-weight: 600;
-  box-shadow: 0 0 15px rgba(0, 242, 254, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
   transition: all 0.3s;
 }
 
-.cta-top:hover {
-  background: var(--glow-cyan);
-  color: #000;
-  box-shadow: 0 0 25px rgba(0, 242, 254, 0.4);
+.nav-links a:hover {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
 }
 
-/* HIGH-STYLISH HERO SECTION */
-.hero-container {
+/* 3D HERO INTERACTIVE INTERFACE */
+.hero-3d-layout {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 40px;
+  gap: 50px;
   align-items: center;
-  padding: 90px 0 120px 0;
+  padding: 80px 0 120px 0;
 }
 
-.badge-tag {
-  background: linear-gradient(90deg, rgba(155,81,224,0.15), rgba(0,242,254,0.15));
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 6px 16px;
-  border-radius: 30px;
+.hero-text h2 {
   font-size: 12px;
-  color: #c084fc;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
+  color: var(--neon-cyan);
   text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
   margin-bottom: 25px;
 }
 
-.hero-intro h1 {
-  font-size: 64px;
-  line-height: 1.05;
-  letter-spacing: -2px;
-  margin-bottom: 25px;
-}
-
-.gradient-title {
-  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #9b51e0 100%);
+.gradient-text {
+  background: linear-gradient(135deg, #fff 30%, var(--neon-cyan) 70%, var(--neon-purple) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.hero-intro p {
+.hero-text p {
   color: var(--text-gray);
-  font-size: 17px;
-  line-height: 1.6;
-  margin-bottom: 40px;
-  max-width: 550px;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 45px;
+  max-width: 560px;
 }
 
-.action-row {
+/* 3D ELEVATED BUTTONS */
+.btn-group {
   display: flex;
   gap: 20px;
 }
 
-.btn-action {
+.btn-3d {
   padding: 16px 36px;
-  border-radius: 14px;
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 12px;
+  cursor: pointer;
   text-decoration: none;
+  box-shadow: 0 5px 0px #0b1126;
+  transform: translateY(0px);
+  transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.btn-solid-glow {
-  background: #ffffff;
-  color: #05050a;
+.btn-3d-cyan {
+  background: var(--neon-cyan);
+  color: #000;
+  box-shadow: 0 5px 0px #00b3bd;
 }
 
-.btn-solid-glow:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+.btn-3d-cyan:active {
+  transform: translateY(5px);
+  box-shadow: 0 0px 0px transparent;
 }
 
-.btn-outline-neon {
-  border: 1px solid rgba(255,255,255,0.1);
+.btn-3d-glass {
+  background: var(--panel-glass);
   color: #fff;
-  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border-glow);
+  box-shadow: 0 5px 0px rgba(0,0,0,0.4);
 }
 
-.btn-outline-neon:hover {
-  border-color: var(--glow-cyan);
-  box-shadow: 0 0 20px rgba(0, 242, 254, 0.15);
+.btn-3d-glass:active {
+  transform: translateY(5px);
+  box-shadow: 0 0px 0px transparent;
 }
 
-/* HIGH TECH GLASS DISPLAY FOR IMAGE */
-.image-display {
+/* ISOMETRIC LAYERED 3D IMAGE SCENE */
+.scene-3d {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: rotateX(15deg) rotateY(-20deg); /* 3D Perspective Rotation */
+  transform-style: preserve-3d;
 }
 
-.image-glow-ring {
-  position: relative;
-  background: var(--panel-bg);
-  border: 1px solid var(--border-neon);
-  padding: 20px;
-  border-radius: 35px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-  backdrop-filter: blur(20px);
-}
-
-.image-glow-ring::after {
-  content: '';
+/* Floating Shadow Base Layer */
+.shadow-base {
   position: absolute;
-  top: -2px; left: -2px; right: -2px; bottom: -2px;
-  background: linear-gradient(135deg, var(--glow-cyan), var(--glow-pink));
-  border-radius: 37px;
-  z-index: -1;
-  opacity: 0.3;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+  border-radius: 24px;
+  opacity: 0.15;
+  transform: translateZ(-40px);
+  filter: blur(25px);
 }
 
-.image-glow-ring img {
+/* Main Photo Card */
+.photo-frame-3d {
+  position: relative;
+  width: 360px;
+  background: var(--panel-glass);
+  border: 1px solid var(--border-glow);
+  padding: 16px;
+  border-radius: 24px;
+  backdrop-filter: blur(20px);
+  transform: translateZ(0px);
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.6);
+  transition: transform 0.4s ease;
+}
+
+.photo-frame-3d img {
   width: 100%;
-  max-width: 380px;
-  border-radius: 20px;
+  border-radius: 16px;
   display: block;
 }
 
-/* FLOATING PERFORMANCE CHIP */
-.floating-chip {
+/* Floating Layer +30px Above the Image */
+.floating-widget-3d {
   position: absolute;
-  bottom: -20px;
-  left: -20px;
-  background: rgba(10, 10, 18, 0.9);
-  border: 1px solid rgba(0, 242, 254, 0.3);
-  padding: 15px 25px;
-  border-radius: 18px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  bottom: 30px;
+  right: -40px;
+  background: rgba(9, 11, 23, 0.85);
+  border: 1px solid rgba(0, 242, 254, 0.4);
+  padding: 16px 24px;
+  border-radius: 16px;
+  box-shadow: 15px 15px 30px rgba(0,0,0,0.5);
+  transform: translateZ(40px); /* Pushes the widget forward into 3D space */
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
 }
 
-.chip-icon {
-  width: 10px;
-  height: 10px;
-  background-color: #10b981;
-  border-radius: 50%;
-  animation: pulse 1.8s infinite;
+.cube-spinner {
+  color: var(--neon-cyan);
+  font-size: 20px;
+  animation: spin 3s infinite linear;
 }
 
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-  70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+@keyframes spin {
+  100% { transform: rotate(360deg); }
 }
 
-.chip-text h4 { font-size: 14px; font-weight: 600; }
-.chip-text p { font-size: 11px; color: var(--text-gray); }
+.widget-info h4 { font-size: 13px; font-weight: 600; color: #fff; }
+.widget-info p { font-size: 11px; color: var(--text-gray); }
 
-/* METRICS / PROJECTS STYLISH FEED */
-.grid-title {
-  font-size: 32px;
-  margin-bottom: 50px;
-  letter-spacing: -1px;
+/* 3D SKILL CARDS STACK */
+.grid-heading {
+  font-size: 28px;
   text-align: center;
-}
-
-.stylish-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 35px;
-  padding-bottom: 120px;
-}
-
-.stylish-card {
-  background: var(--panel-bg);
-  border: 1px solid var(--border-neon);
-  border-radius: 24px;
-  padding: 40px;
-  backdrop-filter: blur(20px);
-  position: relative;
-  transition: all 0.4s;
-  overflow: hidden;
-}
-
-.stylish-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(135deg, rgba(0, 242, 254, 0.05) 0%, transparent 100%);
-  opacity: 0;
-  transition: opacity 0.4s;
-}
-
-.stylish-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(155, 81, 224, 0.4);
-  box-shadow: 0 20px 40px rgba(155, 81, 224, 0.1);
-}
-
-.stylish-card:hover::before {
-  opacity: 1;
-}
-
-.card-num {
-  font-size: 12px;
-  color: var(--glow-cyan);
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-  display: block;
-}
-
-.stylish-card h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
+  margin-bottom: 60px;
   letter-spacing: -0.5px;
 }
 
-.stylish-card p {
+.grid-3d-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding-bottom: 100px;
+}
+
+.card-3d {
+  background: var(--panel-glass);
+  border: 1px solid var(--border-glow);
+  padding: 40px 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.card-3d:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(-5px);
+  border-color: rgba(0, 242, 254, 0.3);
+  box-shadow: 15px 20px 35px rgba(0, 242, 254, 0.1);
+}
+
+.card-3d i {
+  font-size: 32px;
+  color: var(--neon-cyan);
+  margin-bottom: 20px;
+}
+
+.card-3d h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.card-3d p {
   color: var(--text-gray);
   font-size: 14px;
   line-height: 1.6;
-  margin-bottom: 25px;
 }
 
-.tag-container {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.pill-tag {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06);
-  padding: 6px 14px;
-  border-radius: 8px;
-  font-size: 12px;
-  color: #cbd5e1;
-}
-
+/* MOBILE OPTIMIZATION */
 @media(max-width: 968px) {
-  .hero-container { grid-template-columns: 1fr; text-align: center; }
-  .hero-intro h1 { font-size: 44px; }
-  .action-row { justify-content: center; }
-  .stylish-grid { grid-template-columns: 1fr; }
-  .floating-chip { left: 50%; transform: translateX(-50%); }
+  .hero-3d-layout { grid-template-columns: 1fr; text-align: center; }
+  .btn-group { justify-content: center; }
+  .scene-3d { transform: none; margin-top: 50px; }
+  .floating-widget-3d { right: 0; bottom: -20px; }
+  .grid-3d-container { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
 
-<div class="wrapper">
+<div class="main-container">
 
   <!-- NAVBAR -->
-  <header>
-    <div class="logo-text">HASSAN<span>.RZ</span></div>
-    <ul class="nav-menu">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Deployments</a></li>
-      <li><a href="mailto:hassanrz503@gmail.com">Contact</a></li>
+  <nav>
+    <div class="logo">HASSAN RAZA</div>
+    <ul class="nav-links">
+      <li><a href="#about">Identity</a></li>
+      <li><a href="#deployments">Deployments</a></li>
+      <li><a href="mailto:hassanrz503@gmail.com">Secure Link</a></li>
     </ul>
-    <a href="mailto:hassanrz503@gmail.com" class="cta-top">Let's Connect</a>
-  </header>
+  </nav>
 
-  <!-- HERO HEADER SECTION -->
-  <section class="hero-container" id="about">
-    <div class="hero-intro">
-      <div class="badge-tag">
-        <i class="fa-solid fa-bolt"></i> AI / ML Engineering Elite
-      </div>
-      <h1>
-        Designing Intelligent <br>
-        <span class="gradient-title">Data Solutions & Systems</span>
-      </h1>
+  <!-- 3D HERO INTERFACE SECTION -->
+  <section class="hero-3d-layout" id="about">
+    <div class="hero-text">
+      <h2>[ AI Engine Node ]</h2>
+      <h1>Building Scalable <br><span class="gradient-text">Neural Matrices & Data Systems</span></h1>
       <p>
-        Final-year Software Engineering student at QUEST, Nawabshah. Developing state-of-the-art Deep Learning classifiers, automation ETL tracks, and RAG document architectures[cite: 1].
+        Final-year Software Engineering undergraduate student at QUEST, Nawabshah[cite: 1]. Specializing in compiling high-accuracy Deep Learning models, custom NLP/RAG vectors, and end-to-end cloud pipeline deployment[cite: 1].
       </p>
       
-      <div class="action-row">
-        <a href="#projects" class="btn-action btn-solid-glow">View Clusters <i class="fa-solid fa-arrow-right-long"></i></a>
-        <a href="mailto:hassanrz503@gmail.com" class="btn-action btn-outline-neon">Get In Touch</a>
+      <div class="btn-group">
+        <a href="#deployments" class="btn-3d btn-3d-cyan">View Clusters <i class="fa-solid fa-layer-group"></i></a>
+        <a href="mailto:hassanrz503@gmail.com" class="btn-3d btn-3d-glass">Initiate Handshake</a>
       </div>
     </div>
 
-    <!-- STYLISH GLOWING DISPLAY FOR PHOTO -->
-    <div class="image-display">
-      <div class="image-glow-ring">
+    <!-- 3D INTERACTIVE ISOMETRIC SCENE -->
+    <div class="scene-3d">
+      <!-- Glow Base Layer -->
+      <div class="shadow-base"></div>
+      
+      <!-- Main Glass Frame for Image -->
+      <div class="photo-frame-3d">
         <img src="hassan photo.png" alt="Hassan Raza">
-        
-        <!-- Live status notification badge -->
-        <div class="floating-chip">
-          <div class="chip-icon"></div>
-          <div class="chip-text">
-            <h4>97% Accuracy Achieved</h4>
-            <p>Traffic Sign CNN Classifier[cite: 1]</p>
-          </div>
+      </div>
+      
+      <!-- Forefront Floating Widget Card (+40px depth) -->
+      <div class="floating-widget-3d">
+        <div class="cube-spinner">
+          <i class="fa-solid fa-cube"></i>
+        </div>
+        <div class="widget-info">
+          <h4>CNN Classifier Live</h4>
+          <p>97% Production Accuracy[cite: 1]</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- DISPLAY PROJECTS -->
-  <section id="projects">
-    <h2 class="grid-title">Engineered Architectures</h2>
-    <div class="stylish-grid">
+  <!-- 3D GRID STACK SECTION -->
+  <section id="deployments">
+    <h2 class="grid-heading">Production Clusters</h2>
+    <div class="grid-3d-container">
       
       <!-- CARD 1 -->
-      <div class="stylish-card">
-        <span class="card-num">// PIPELINE 01</span>
-        <h3>Plant Disease Detection Core</h3>
-        <p>Trained a hybrid CNN + ensemble pipeline across 14,000+ crop images with 90% accuracy, fully encapsulated into Docker environments[cite: 1].</p>
-        <div class="tag-container">
-          <span class="pill-tag">TensorFlow</span>
-          <span class="pill-tag">Flask</span>
-          <span class="pill-tag">Docker</span>
-          <span class="pill-tag">MySQL</span>
-        </div>
+      <div class="card-3d">
+        <i class="fa-solid fa-robot"></i>
+        <h3>Plant Disease System</h3>
+        <p>Hybrid CNN + ensemble workflow trained across 14,000+ localized crops to hit 90% real-world diagnostic precision[cite: 1].</p>
       </div>
 
       <!-- CARD 2 -->
-      <div class="stylish-card">
-        <span class="card-num">// PIPELINE 02</span>
-        <h3>AI RAG Document Chatbot</h3>
-        <p>Built an operational retrieval chatbot utilizing Hugging Face context embeddings combined with ultra-dense FAISS matrix vector searching[cite: 1].</p>
-        <div class="tag-container">
-          <span class="pill-tag">Transformers</span>
-          <span class="pill-tag">LangChain</span>
-          <span class="pill-tag">Streamlit</span>
-        </div>
+      <div class="card-3d">
+        <i class="fa-solid fa-brain"></i>
+        <h3>RAG Document Chatbot</h3>
+        <p>Operational large context LLM pipeline optimized with Hugging Face token embeddings and ultra-dense FAISS matrix indexes[cite: 1].</p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card-3d">
+        <i class="fa-solid fa-database"></i>
+        <h3>Automated ETL Flow</h3>
+        <p>Structured secure relational databases running SQL window operations connected natively to automated Power BI layers[cite: 1].</p>
       </div>
 
     </div>
