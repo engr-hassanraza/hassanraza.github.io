@@ -3,302 +3,507 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hassan Raza | Portfolio</title>
+<title>Hassan Raza | Senior AI/ML Engineer & Data Scientist</title>
 
-<!-- Font Awesome for Icons -->
+<!-- Google Fonts & Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* GLOBAL STYLES */
-*{
+/* PREMIUM CYBERPUNK / GLASSMORPHISM VARIABLES */
+:root {
+  --bg-dark: #090d16;
+  --bg-card: rgba(17, 25, 40, 0.65);
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --text-primary: #f3f4f6;
+  --text-muted: #9ca3af;
+  --accent-cyan: #06b6d4;
+  --accent-amber: #f59e0b;
+}
+
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'Poppins', Arial, sans-serif;
-  background-color: #fcefd2; /* Outer background accent color matching the image */
-  color: #222;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(6, 182, 212, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.04) 0%, transparent 40%);
 }
 
-.page-wrapper {
-  max-width: 1400px;
+h1, h2, h3, .logo {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1300px;
   margin: 0 auto;
-  background: #fff;
-  box-shadow: 0 0 30px rgba(0,0,0,0.05);
+  padding: 0 40px;
 }
 
-/* NAVBAR */
+/* HIGH-CLASS NAVBAR */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 60px;
-  background: #fffef9;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--border-glass);
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: 800;
-  color: #111;
-}
-
-.logo span {
-  color: #6366f1; /* Small dot color accent */
-  font-size: 26px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  align-items: center;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #444;
-  font-size: 14px;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #f4b400;
-}
-
-.btn-coffee {
-  background: #f4b400;
-  color: #fff !important;
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-size: 13px !important;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
   display: flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 4px 10px rgba(244, 180, 0, 0.3);
 }
 
-/* HERO SECTION */
-.hero {
+.logo span {
+  color: var(--accent-cyan);
+}
+
+.nav-links {
   display: flex;
-  justify-content: space-between;
+  gap: 35px;
+  list-style: none;
   align-items: center;
-  padding: 60px 80px 100px 80px;
-  /* Cream gradient matching image_d6d482.png */
-  background: linear-gradient(180deg, #fffef9 0%, #fdf3dc 100%); 
-  position: relative;
-  overflow: hidden;
 }
 
-.hero-content {
-  max-width: 550px;
-  z-index: 2;
-}
-
-.badge-hello {
-  background: #fbe5cc;
-  color: #d97706;
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
   font-size: 14px;
-  font-weight: 700;
-  padding: 6px 16px;
-  border-radius: 8px;
-  display: inline-flex;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text-primary);
+  text-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+.btn-contact {
+  background: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%);
+  color: #fff !important;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.25);
+}
+
+/* PREMIUM HERO DASHBOARD */
+.hero-wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
   align-items: center;
-  gap: 6px;
+  padding: 80px 0 120px 0;
+}
+
+.hero-text h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--accent-amber);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-text h2::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: var(--accent-amber);
+}
+
+.hero-text h1 {
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1px;
   margin-bottom: 25px;
 }
 
-.hero-content h1 {
-  font-size: 52px;
-  font-weight: 800;
-  line-height: 1.2;
-  color: #2d2d2d;
-  margin-bottom: 30px;
+.hero-text h1 span {
+  background: linear-gradient(to right, #fff, #9ca3af);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.hero-buttons {
+.hero-text p {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 580px;
+}
+
+.hero-cta {
   display: flex;
   gap: 20px;
 }
 
-.btn-main {
-  padding: 15px 32px;
-  font-size: 16px;
-  font-weight: 700;
+.btn-premium {
+  padding: 16px 36px;
+  font-size: 15px;
+  font-weight: 600;
   border-radius: 12px;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.3s;
-  display: inline-flex;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-cyan {
+  background: #fff;
+  color: var(--bg-dark);
+}
+
+.btn-cyan:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255,255,255,0.15);
+}
+
+.btn-outline-glass {
+  border: 1px solid var(--border-glass);
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.02);
+}
+
+.btn-outline-glass:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* HIGH-TECH IMAGE CONTAINER */
+.hero-image-frame {
+  position: relative;
+  border-radius: 24px;
+  padding: 12px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 100%);
+  border: 1px solid var(--border-glass);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+}
+
+.hero-image-frame img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  filter: grayscale(15%) contrast(105%);
+  background: #111827;
+}
+
+/* METRICS / LIVE CHIPS */
+.live-indicator {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: rgba(9, 13, 22, 0.8);
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 1px solid var(--border-glass);
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
   align-items: center;
   gap: 8px;
+  backdrop-filter: blur(8px);
 }
 
-.btn-yellow {
-  background: #f4b400;
-  color: #fff;
-  border: none;
-  box-shadow: 0 5px 15px rgba(244, 180, 0, 0.4);
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #10b981;
 }
 
-.btn-yellow:hover {
-  background: #dba100;
-}
-
-.btn-white {
-  background: #fff;
-  color: #333;
-  border: 2px solid #222;
-}
-
-.btn-white:hover {
-  background: #f5f5f5;
-}
-
-/* HERO IMAGE AREA WITH FLOATING BADGES */
-.hero-image-container {
-  position: relative;
-  width: 500px;
-  height: 450px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-/* Yellow circular blob behind user image */
-.yellow-shape {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background-color: #eab308;
-  border-radius: 50% 50% 30% 70% / 50% 60% 40% 50%; /* Organic round shape */
-  bottom: 20px;
-  z-index: 1;
-}
-
-.user-photo {
-  width: 360px;
-  z-index: 2;
-  position: relative;
-  pointer-events: none;
-}
-
-/* Floating Badges */
-.floating-badge {
-  position: absolute;
-  background: #fff;
-  padding: 10px 20px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
-  gap: 10px;
+/* TECH CORE STACK GRID */
+.section-title {
+  font-size: 28px;
   font-weight: 700;
-  font-size: 14px;
-  z-index: 3;
+  letter-spacing: -0.5px;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
-.badge-tech {
-  top: 80px;
-  right: 10px;
-  color: #4f46e5;
+.skills-matrix {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding-bottom: 100px;
 }
 
-.badge-design {
-  bottom: 140px;
-  right: -20px;
-  color: #ec4899;
+.matrix-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  transition: all 0.4s ease;
 }
 
-/* CASE STUDIES / PORTFOLIO BOTTOM SECTION */
-.case-studies {
-  background: #f8fafc;
-  padding: 60px 80px;
+.matrix-box:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+  transform: translateY(-5px);
 }
 
-.case-studies h2 {
-  font-size: 32px;
-  font-weight: 800;
-  color: #1e293b;
+.matrix-box i {
+  font-size: 28px;
+  color: var(--accent-cyan);
   margin-bottom: 20px;
 }
 
-/* RESPONSIVENESS */
-@media(max-width: 992px) {
-  nav { padding: 20px; }
-  nav ul { display: none; } /* Kept simple for preview */
-  .hero { flex-direction: column; text-align: center; padding: 40px 20px; }
-  .hero-content { margin-bottom: 50px; }
-  .hero-buttons { justify-content: center; }
-  .hero-image-container { width: 100%; }
-  .badge-design { right: 20px; }
+.matrix-box h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.matrix-box p {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* HIGH-CLASS PROJECTS PORTFOLIO FEED */
+.projects-feed {
+  padding: 60px 0 120px 0;
+  border-top: 1px solid var(--border-glass);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: 24px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  transition: all 0.4s ease;
+}
+
+.project-card:hover {
+  border-color: rgba(255,255,255,0.15);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+.project-info {
+  padding: 40px;
+}
+
+.project-meta {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-amber);
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.project-info h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.project-info p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.project-tech-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border-glass);
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* FOOTER DASHBOARD */
+footer {
+  border-top: 1px solid var(--border-glass);
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+@media (max-width: 968px) {
+  .hero-wrapper { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+  .hero-text h1 { font-size: 42px; }
+  .hero-cta { justify-content: center; }
+  .skills-matrix { grid-template-columns: repeat(2, 1fr); }
+  .projects-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
 
-<div class="page-wrapper">
+<div class="container">
 
-  <!-- NAVBAR -->
+  <!-- NAVIGATION BAR -->
   <nav>
-    <div class="logo">Hassan<span>.ai</span></div>
-    <ul>
-      <li><a href="#">AboutMe</a></li>
-      <li><a href="#">Skills</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">CaseStudies</a></li>
-      <li><a href="#">Experience</a></li>
-      <li><a href="mailto:hassanrz503@gmail.com" class="btn-coffee"><i class="fa-solid fa-envelope"></i> Hire Me</a></li>
+    <div class="logo"><i class="fa-solid fa-microchip"></i> HASSAN<span>.RAZA</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">Core</a></li>
+      <li><a href="#skills">Skills Matrix</a></li>
+      <li><a href="#projects">Deployments</a></li>
+      <li><a href="mailto:hassanrz503@gmail.com" class="btn-contact">Initiate Contact</a></li>
     </ul>
   </nav>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    
-    <div class="hero-content">
-      <div class="badge-hello">
-        👋 Hello All
-      </div>
-      <h1>
-        I'm Hassan Raza,<br>
-        A Problem solver<br>
-        and AI Engineer
-      </h1>
-      
-      <div class="hero-buttons">
-        <a href="#" class="btn-main btn-yellow">About me <i class="fa-solid fa-circle-arrow-right"></i></a>
-        <a href="mailto:hassanrz503@gmail.com" class="btn-main btn-white">Contact Me</a>
+  <!-- HERO ENGINE HEADER -->
+  <section class="hero-wrapper" id="about">
+    <div class="hero-text">
+      <h2>AI / ML Engineering Intelligence</h2>
+      <h1>Building Intelligent Systems & <span>Predictive Architectures</span></h1>
+      <p>
+        Final-year Software Engineering undergraduate at QUEST, Nawabshah. Architecting highly precise Deep Learning classifiers, deploying intelligent RAG-driven document layers, and scaling data automated pipelines[cite: 1].
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-premium btn-cyan">Explore Solutions</a>
+        <a href="mailto:hassanrz503@gmail.com" class="btn-premium btn-outline-glass">Request CV / Consult</a>
       </div>
     </div>
 
-    <!-- HERO IMAGE AREA WITH EXACT BADGES FROM IMAGE -->
-    <div class="hero-image-container">
-      <!-- Background Yellow Shape -->
-      <div class="yellow-shape"></div>
-      
-      <!-- Hassan's Image -->
-      <img src="hassan photo.png" alt="Hassan Raza" class="user-photo">
-      
-      <!-- Tech Floating Badge -->
-      <div class="floating-badge badge-tech">
-        <span>🔔</span> TECH
+    <!-- HIGH CLASS CARD PATTERN WITH IMAGE -->
+    <div class="hero-image-frame">
+      <div class="live-indicator">
+        <div class="pulse-dot"></div> Active Deployment
       </div>
-      
-      <!-- Design/Analytics Floating Badge -->
-      <div class="floating-badge badge-design">
-        <span>🎨</span> DATA
-      </div>
+      <img src="hassan photo.png" alt="Hassan Raza Portfolio Image">
     </div>
-
   </section>
 
-  <!-- RECENT CASE STUDIES SECTION -->
-  <section class="case-studies">
-    <h2>My Recent Projects</h2>
-    <!-- Baki ka projects data yahan dynamically aa sakta hai -->
+  <!-- CORE MATRIX STACK SECTION -->
+  <section id="skills">
+    <h2 class="section-title">Technical Competence Matrix</h2>
+    <div class="skills-matrix">
+      
+      <div class="matrix-box">
+        <i class="fa-solid fa-brain"></i>
+        <h3>Deep Learning</h3>
+        <p>Advanced feature engineering, hybrid CNN layers, ensemble model workflows via TensorFlow & Keras[cite: 1].</p>
+      </div>
+
+      <div class="matrix-box">
+        <i class="fa-solid fa-chart-network"></i>
+        <h3>Data Science</h3>
+        <p>Comprehensive EDA pipelines, custom predictive analysis using Scikit-Learn, NumPy, and Pandas[cite: 1].</p>
+      </div>
+
+      <div class="matrix-box">
+        <i class="fa-solid fa-cubes"></i>
+        <h3>Deployment</h3>
+        <p>Containerizing intelligent REST APIs using Docker, running microservices on top of Flask frameworks[cite: 1].</p>
+      </div>
+
+      <div class="matrix-box">
+        <i class="fa-solid fa-chart-bar"></i>
+        <h3>BI & Analytics</h3>
+        <p>Architecting live relational datasets, processing direct SQL window queries, and building Power BI layers[cite: 1].</p>
+      </div>
+
+    </div>
   </section>
+
+  <!-- HIGHEST RATED PRODUCTION DEPLOYMENTS -->
+  <section class="projects-feed" id="projects">
+    <h2 class="section-title">Selected Production Deployments</h2>
+    <div class="projects-grid">
+      
+      <!-- PROJECT 01 -->
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-meta">Computer Vision & AgroTech</div>
+          <h3>Plant Disease Detection & Monitoring System</h3>
+          <p>Trained a hybrid CNN + ensemble pipeline on 14,000+ wheat leaf images achieving 90% real-world accuracy[cite: 1]. Built Flask REST API layers containerized under Docker[cite: 1].</p>
+          <div class="project-tech-tags">
+            <span class="tech-tag">TensorFlow</span>
+            <span class="tech-tag">OpenCV</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">MySQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 02 -->
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-meta">Generative AI & LLM Systems</div>
+          <h3>AI Document Q&A Chatbot</h3>
+          <p>Implemented a highly robust RAG-based document parsing engine using Hugging Face deep context text embeddings and fast FAISS dense vector searches[cite: 1].</p>
+          <div class="project-tech-tags">
+            <span class="tech-tag">Transformers</span>
+            <span class="tech-tag">LangChain</span>
+            <span class="tech-tag">Streamlit</span>
+            <span class="tech-tag">Docker</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 03 -->
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-meta">Autonomous Vehicle Intelligence</div>
+          <h3>Traffic Sign Recognition Web App</h3>
+          <p>Engineered a high-performance deep CNN classifier evaluated on GTSRB datasets containing over 50,000+ spatial frames, realizing a staggering 97% recognition accuracy[cite: 1].</p>
+          <div class="project-tech-tags">
+            <span class="tech-tag">TensorFlow</span>
+            <span class="tech-tag">Keras</span>
+            <span class="tech-tag">OpenCV</span>
+            <span class="tech-tag">Streamlit</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 04 -->
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-meta">Data Infrastructure & Business Intelligence</div>
+          <h3>Sales Performance Dashboard</h3>
+          <p>Automated raw complex database ETL sequences reducing processing effort by 70%, plugged directly into a granular relational Power BI interactive dashboard[cite: 1].</p>
+          <div class="project-tech-tags">
+            <span class="tech-tag">Power BI</span>
+            <span class="tech-tag">SQL Window Functions</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">ETL</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DASHBOARD FOOTER -->
+  <footer>
+    <p>&copy; 2026 Hassan Raza. All System Systems Online.</p>
+    <p><i class="fa-solid fa-location-dot"></i> Matiari, Sindh, Pakistan [QUEST Nawabshah][cite: 1]</p>
+  </footer>
 
 </div>
 
