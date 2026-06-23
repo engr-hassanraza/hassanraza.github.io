@@ -3,21 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hassan Raza | AI Innovation Node</title>
+<title>Hassan Raza | AI Matrix Node</title>
 
 <!-- External Icons & Fonts -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-/* ULTRA-STYLISH LIQUID CYBER THEME */
+/* FLAWLESS INTERACTIVE CYBER ENGINE THEME */
 :root {
-  --bg-dark: #030207;
-  --glass-card: rgba(15, 12, 30, 0.6);
-  --border-neon: rgba(255, 255, 255, 0.06);
+  --bg-core: #020205;
+  --glass: rgba(10, 10, 22, 0.7);
   --neon-cyan: #00f2fe;
-  --neon-magenta: #ff007f;
-  --neon-orange: #ff9f43;
+  --neon-purple: #7f00ff;
+  --neon-pink: #ff007f;
+  --text-white: #ffffff;
+  --text-dim: #94a3b8;
 }
 
 * {
@@ -27,256 +28,428 @@
 }
 
 body {
-  background-color: var(--bg-dark);
-  color: #fff;
+  background-color: var(--bg-core);
+  color: var(--text-white);
   font-family: 'Plus Jakarta Sans', sans-serif;
-  padding: 40px 20px;
   overflow-x: hidden;
-  /* Ambient glow spots in background */
-  background-image: 
-    radial-gradient(circle at 10% 10%, rgba(0, 242, 254, 0.12) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(255, 0, 127, 0.08) 0%, transparent 40%);
-}
-
-.bento-container {
-  max-width: 1250px;
-  margin: 0 auto;
-  display: grid;
-  /* Complex interactive grid mapping */
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(160px, auto);
-  gap: 20px;
-}
-
-/* WIDGET BASE STYLE */
-.widget {
-  background: var(--glass-card);
-  border: 1px solid var(--border-neon);
-  border-radius: 28px;
-  padding: 30px;
-  backdrop-filter: blur(20px);
   position: relative;
-  overflow: hidden;
+}
+
+/* JAVASCRIPT PARTICLE CANVAS OVERLAY */
+#neural-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none; /* Mouse moves through it seamlessly */
+}
+
+/* INTERACTIVE INTERFACE WRAPPER */
+.app-viewport {
+  position: relative;
+  z-index: 2; /* Sits completely above the particle cloud */
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* GLASS NAVIGATION */
+nav {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
 }
 
-.widget:hover {
-  transform: scale(1.02) translateY(-5px);
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-}
-
-/* CUSTOM SPANNING FOR BENTO LAYOUT */
-.w-hero { grid-column: span 2; grid-row: span 2; background: linear-gradient(135deg, rgba(20,10,40,0.8), rgba(5,5,15,0.8)); border-color: rgba(0, 242, 254, 0.2); }
-.w-photo { grid-column: span 2; grid-row: span 2; padding: 0; }
-.w-wide { grid-column: span 2; }
-.w-tall { grid-row: span 2; }
-
-/* HERO WIDGET CONTENT */
-.w-hero h2 {
-  font-size: 13px;
-  color: var(--neon-cyan);
-  text-transform: uppercase;
+.terminal-logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
   letter-spacing: 2px;
-  margin-bottom: 15px;
-}
-
-.w-hero h1 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 46px;
-  line-height: 1.1;
-  margin-bottom: 20px;
-  background: linear-gradient(to right, #fff, #9ca3af);
+  background: linear-gradient(90deg, #fff, var(--neon-cyan));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.w-hero p {
-  color: #a0aec0;
-  font-size: 15px;
-  line-height: 1.6;
+.terminal-logo span {
+  color: var(--neon-pink);
+  -webkit-text-fill-color: initial;
 }
 
-/* PHOTO WIDGET WITH BLENDED GRADIENT FLUID BOX */
-.w-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s;
+/* HYPER-ATTRACTIVE HERO SECTOR */
+.interactive-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+  padding: 80px 0 140px 0;
 }
 
-.w-photo:hover img {
-  transform: scale(1.05);
-}
-
-.photo-overlay {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background: rgba(0,0,0,0.7);
-  padding: 8px 16px;
-  border-radius: 40px;
-  font-size: 12px;
-  font-weight: 600;
-  border: 1px solid rgba(255,255,255,0.1);
-}
-
-.pulse-dot {
+.glitch-tag {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  color: var(--neon-cyan);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: rgba(0, 242, 254, 0.08);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  padding: 6px 14px;
+  border-radius: 6px;
   display: inline-block;
-  width: 8px;
-  height: 8px;
-  background: #00ff66;
-  border-radius: 50%;
-  margin-right: 6px;
-  box-shadow: 0 0 8px #00ff66;
+  margin-bottom: 25px;
+  animation: pulse-glow 2s infinite alternate;
 }
 
-/* PROJECTS DISPLAY WIDGETS */
-.widget h3 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 20px;
-  margin-bottom: 10px;
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 5px rgba(0,242,254,0.2); }
+  100% { box-shadow: 0 0 15px rgba(0,242,254,0.6); }
+}
+
+.interactive-hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 58px;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.fluid-gradient {
+  background: linear-gradient(135deg, #fff 20%, var(--neon-cyan) 60%, var(--neon-pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.interactive-hero p {
+  color: var(--text-dim);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 45px;
+  max-width: 550px;
+}
+
+/* JAVASCRIPT-TRIGGERED GLOWING ACTION BUTTONS */
+.action-cluster {
   display: flex;
+  gap: 20px;
+}
+
+.btn-cyber {
+  padding: 16px 36px;
+  font-size: 13px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: inline-flex;
   align-items: center;
   gap: 10px;
 }
 
-.widget h3 i { color: var(--neon-magenta); }
-
-.widget p {
-  color: #a0aec0;
-  font-size: 13px;
-  line-height: 1.5;
-}
-
-/* METRICS & QUICK CAPSULES */
-.stat-num {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 42px;
-  font-weight: 700;
-  color: var(--neon-cyan);
-  margin-bottom: 5px;
-}
-
-.tag-cloud {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-top: 15px;
-}
-
-.tag {
-  background: rgba(255,255,255,0.04);
-  padding: 4px 10px;
-  border-radius: 8px;
-  font-size: 11px;
-  color: #cbd5e1;
-  border: 1px solid var(--border-neon);
-}
-
-/* CONNECT BUTTON BUTTON */
-.btn-neon {
-  background: linear-gradient(90deg, var(--neon-cyan), #0072ff);
+.btn-cyan-glow {
+  background: var(--neon-cyan);
   color: #000;
-  text-decoration: none;
-  padding: 15px;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+}
+
+.btn-cyan-glow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px var(--neon-cyan);
+}
+
+.btn-glass-neon {
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  background: rgba(255,255,255,0.02);
+  backdrop-filter: blur(10px);
+}
+
+.btn-glass-neon:hover {
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.4);
+}
+
+/* INTERACTIVE JAVASCRIPT TILT IMAGE CONTAINER */
+.photo-matrix-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.matrix-card {
+  background: var(--glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 32px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+  backdrop-filter: blur(25px);
+  position: relative;
+  transition: transform 0.1s ease; /* Fast response for mouse tilt logic */
+}
+
+.matrix-card::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: -1px; right: -1px; bottom: -1px;
+  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+  border-radius: 33px;
+  z-index: -1;
+  opacity: 0.25;
+}
+
+.matrix-card img {
+  width: 100%;
+  max-width: 360px;
   border-radius: 20px;
+  display: block;
+}
+
+/* FLOATING REAL-TIME SYSTEM ENGINE INFOCARD */
+.live-telemetry-widget {
+  position: absolute;
+  bottom: -20px;
+  right: -30px;
+  background: rgba(5, 5, 12, 0.9);
+  border: 1px solid var(--neon-cyan);
+  border-radius: 16px;
+  padding: 15px 25px;
+  box-shadow: 0 15px 35px rgba(0,242,254,0.2);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.telemetry-node {
+  width: 8px;
+  height: 8px;
+  background-color: #00ff66;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00ff66;
+}
+
+.telemetry-data h4 { font-size: 13px; font-family: 'Orbitron', sans-serif; letter-spacing: 0.5px; }
+.telemetry-data p { font-size: 11px; color: var(--text-dim); }
+
+/* INTERACTIVE PRODUCTION GRID SECTION */
+.section-header {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
   text-align: center;
-  font-weight: 800;
-  font-size: 14px;
-  text-transform: uppercase;
+  margin-bottom: 60px;
   letter-spacing: 1px;
-  box-shadow: 0 8px 20px rgba(0, 242, 254, 0.2);
-  margin-top: auto;
 }
 
-.btn-neon:hover {
-  box-shadow: 0 12px 25px rgba(0, 242, 254, 0.4);
+.deployment-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding-bottom: 120px;
 }
 
-/* RESPONSIBILITY CHECK */
-@media (max-width: 900px) {
-  .bento-container { grid-template-columns: repeat(2, 1fr); }
-  .w-hero, .w-photo { grid-column: span 2; }
+.cyber-card {
+  background: var(--glass);
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 40px;
+  border-radius: 24px;
+  backdrop-filter: blur(20px);
+  position: relative;
+  transition: all 0.3s;
 }
 
-@media (max-width: 600px) {
-  .bento-container { grid-template-columns: 1fr; }
-  .w-hero, .w-photo, .w-wide { grid-column: span 1; }
+.cyber-card:hover {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 15px 30px rgba(0, 242, 254, 0.1);
+  transform: translateY(-5px);
+}
+
+.cyber-card-num {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  color: var(--neon-pink);
+  margin-bottom: 15px;
+  display: block;
+}
+
+.cyber-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.cyber-card p {
+  color: var(--text-dim);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media(max-width: 968px) {
+  .interactive-hero { grid-template-columns: 1fr; text-align: center; }
+  .action-cluster { justify-content: center; }
+  .deployment-matrix-grid { grid-template-columns: 1fr; }
+  .live-telemetry-widget { right: 50%; transform: translateX(50%); }
 }
 </style>
 </head>
 <body>
 
-<div class="bento-container">
+<!-- THE BACKGROUND NEURAL JAVASCRIPT DYNAMIC CANVAS -->
+<canvas id="neural-canvas"></canvas>
 
-  <!-- HERO WIDGET -->
-  <div class="widget w-hero">
-    <h2>[ Intelligence System Node ]</h2>
-    <h1>Hi, I'm Hassan Raza</h1>
-    <p>
-      Final-year Software Engineering student at QUEST, Nawabshah[cite: 1]. I train advanced Deep Learning classifiers, configure custom RAG vectors, and engineer automated data streaming pipelines[cite: 1].
-    </p>
-  </div>
+<div class="app-viewport">
 
-  <!-- INTERACTIVE PORTRAIT CONTAINER -->
-  <div class="widget w-photo">
-    <img src="hassan photo.png" alt="Hassan Raza Portrait">
-    <div class="photo-overlay">
-      <span class="pulse-dot"></span> Available for Deployments
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="terminal-logo">HASSAN<span>_RAZA</span></div>
+    <a href="mailto:hassanrz503@gmail.com" class="btn-cyber btn-glass-neon" style="padding: 10px 20px; font-size: 11px;">Connect</a>
+  </nav>
+
+  <!-- INTERACTIVE HERO SECTION -->
+  <section class="interactive-hero">
+    <div class="hero-context">
+      <div class="glitch-tag">// AI CORE COMPILER NODE</div>
+      <h1>Architecting Intelligent <br><span class="fluid-gradient">Neural Core Matrices</span></h1>
+      <p>
+        Final-year Software Engineering undergraduate at QUEST, Nawabshah. Specializing in assembling high-accuracy Deep Learning models, custom NLP/RAG vector search channels, and fully containerized architecture deployments[cite: 1].
+      </p>
+      
+      <div class="action-cluster">
+        <a href="#clusters" class="btn-cyber btn-cyan-glow">Initialize Clusters <i class="fa-solid fa-terminal"></i></a>
+        <a href="mailto:hassanrz503@gmail.com" class="btn-cyber btn-glass-neon">Request CV</a>
+      </div>
     </div>
-  </div>
 
-  <!-- CORE STACK WIDGET -->
-  <div class="widget w-tall">
-    <h3><i class="fa-solid fa-microchip"></i> Tech Stack</h3>
-    <p>Engineered layers built with top-tier tools:</p>
-    <div class="tag-cloud">
-      <span class="tag">Python</span>
-      <span class="tag">TensorFlow</span>
-      <span class="tag">Docker</span>
-      <span class="tag">Flask</span>
-      <span class="tag">SQL</span>
-      <span class="tag">Power BI</span>
-      <span class="tag">OpenCV</span>
+    <!-- JAVASCRIPT MOUSE TILT LAYER FRAME -->
+    <div class="photo-matrix-wrapper">
+      <div class="matrix-card" id="js-tilt-card">
+        <img src="hassan photo.png" alt="Hassan Raza">
+        
+        <!-- Live status notification badge -->
+        <div class="live-telemetry-widget">
+          <div class="telemetry-node"></div>
+          <div class="telemetry-data">
+            <h4>97% Accuracy Realized</h4>
+            <p>Traffic Sign CNN Layer Node[cite: 1]</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- HIGHEST PERFORMANCE METRIC -->
-  <div class="widget">
-    <div class="stat-num">97%</div>
-    <h3>Accuracy</h3>
-    <p>Achieved on CNN Traffic Sign Classifier node[cite: 1].</p>
-  </div>
+  <!-- DEPLOYED INFRASTRUCTURE MATRIX -->
+  <section id="clusters">
+    <h2 class="section-header">Active Microservice Clusters</h2>
+    <div class="deployment-matrix-grid">
+      
+      <!-- LAYER 1 -->
+      <div class="cyber-card">
+        <span class="cyber-card-num">// NODE_01</span>
+        <h3>AgroTech Diagnostics</h3>
+        <p>Hybrid CNN + ensemble pipeline trained across 14,000+ spatial crops to resolve 90% diagnostic accuracy under isolated Docker containers[cite: 1].</p>
+      </div>
 
-  <!-- CONTACT / HIRE WIDGET -->
-  <div class="widget">
-    <h3>Let's Collaborate</h3>
-    <p style="margin-bottom: 15px;">Need an AI model or a production data layer deployed?[cite: 1]</p>
-    <a href="mailto:hassanrz503@gmail.com" class="btn-neon">Initiate Handshake</a>
-  </div>
+      <!-- LAYER 2 -->
+      <div class="cyber-card">
+        <span class="cyber-card-num">// NODE_02</span>
+        <h3>RAG Generative Chatbot</h3>
+        <p>Operational large-scale document parser engine leveraging Hugging Face text embeddings mapped against fast FAISS dense vectors[cite: 1].</p>
+      </div>
 
-  <!-- PROJECT 1 WIDGET -->
-  <div class="widget w-wide">
-    <h3><i class="fa-solid fa-seedling"></i> Plant Disease Detection Monitor</h3>
-    <p>
-      Trained a hybrid CNN + ensemble pipeline on 14,000+ crop images with 90% accuracy, packaged seamlessly under Docker container systems with automated logging[cite: 1].
-    </p>
-  </div>
-
-  <!-- PROJECT 2 WIDGET -->
-  <div class="widget w-wide">
-    <h3><i class="fa-solid fa-brain"></i> AI Document Q&A Vector Engine</h3>
-    <p>
-      Developed an active retrieval chatbot pipeline running Hugging Face context layer text embeddings tied to dense FAISS vector searches[cite: 1].
-    </p>
-  </div>
+    </div>
+  </section>
 
 </div>
+
+<!-- INJECTING PURE HIGH-END VANILLA JAVASCRIPT FOR REAL-TIME RENDERING -->
+<script>
+// 1. NEURAL CORE PARTICLE SYSTEM (PURE JS CANVAS ENGINE)
+const canvas = document.getElementById('neural-canvas');
+const ctx = canvas.getContext('2d');
+
+let particles = [];
+const particleCount = 75;
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+class Particle {
+  constructor() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.vx = (Math.random() - 0.5) * 0.6;
+    this.vy = (Math.random() - 0.5) * 0.6;
+    this.radius = Math.random() * 2 + 1;
+  }
+  update() {
+    this.x += this.vx;
+    this.y += this.vy;
+    if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+    if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+  }
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(0, 242, 254, 0.4)';
+    ctx.fill();
+  }
+}
+
+for(let i=0; i<particleCount; i++) {
+  particles.push(new Particle());
+}
+
+function animateParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+  // Draw & Connect nodes like a Neural Grid
+  for(let i=0; i<particles.length; i++) {
+    particles[i].update();
+    particles[i].draw();
+    
+    for(let j=i+1; j<particles.length; j++) {
+      const dx = particles[i].x - particles[j].x;
+      const dy = particles[i].y - particles[j].y;
+      const dist = Math.sqrt(dx*dx + dy*dy);
+      
+      if(dist < 120) {
+        ctx.beginPath();
+        ctx.moveTo(particles[i].x, particles[i].y);
+        ctx.lineTo(particles[j].x, particles[j].y);
+        ctx.strokeStyle = `rgba(127, 0, 255, ${0.15 - dist/120})`;
+        ctx.lineWidth = 0.8;
+        ctx.stroke();
+      }
+    }
+  }
+  requestAnimationFrame(animateParticles);
+}
+animateParticles();
+
+
+// 2. MOUSE TILT INTERACTION LOGIC FOR THE IMAGE CARD
+const card = document.getElementById('js-tilt-card');
+document.addEventListener('mousemove', (e) => {
+  const xAxis = (window.innerWidth / 2 - e.pageX) / 35;
+  const yAxis = (window.innerHeight / 2 - e.pageY) / 35;
+  card.style.transform = `rotateY(${xAxis}deg) rotateX(${--yAxis}deg)`;
+});
+
+// Reset card position smoothly when mouse leaves window
+document.addEventListener('mouseleave', () => {
+  card.style.transform = 'rotateY(0deg) rotateX(0deg)';
+  card.style.transition = 'transform 0.5s ease';
+});
+document.addEventListener('mouseenter', () => {
+  card.style.transition = 'none';
+});
+</script>
 
 </body>
 </html>
