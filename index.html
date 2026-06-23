@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Discover The World</title>
+<title>Hassan Raza | AI/ML Engineer Portfolio</title>
 
+<!-- Font Awesome Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -26,6 +27,7 @@ nav{
 
 nav h2{
   font-size:22px;
+  color: #f4b400;
 }
 
 nav ul{
@@ -38,6 +40,11 @@ nav ul li{
   cursor:pointer;
   color:#555;
   font-size:14px;
+  transition: color 0.3s;
+}
+
+nav ul li:hover{
+  color: #f4b400;
 }
 
 /* HERO SECTION */
@@ -50,31 +57,38 @@ nav ul li{
 }
 
 .hero-text{
-  max-width:500px;
+  max-width:600px;
 }
 
 .hero-text h2{
   color:#f4b400;
-  font-size:30px;
+  font-size:24px;
   margin:0;
+  letter-spacing: 2px;
 }
 
 .hero-text h1{
-  font-size:60px;
+  font-size:50px;
   margin:10px 0;
+  line-height: 1.2;
 }
 
 .hero-text p{
   color:#666;
   line-height:1.6;
+  font-size: 16px;
 }
 
 .btn{
-  padding:10px 18px;
+  padding:12px 22px;
   margin-right:10px;
   border:none;
   cursor:pointer;
-  margin-top:10px;
+  margin-top:15px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
 }
 
 .btn-primary{
@@ -85,20 +99,25 @@ nav ul li{
 .btn-outline{
   border:1px solid #333;
   background:transparent;
+  color: #333;
 }
 
 /* HERO IMAGE */
 .hero img{
-  width:420px;
+  width:400px;
+  height: 400px;
+  object-fit: cover;
   border-radius:10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
 /* ICON SECTION */
 .icons{
   display:flex;
   justify-content:center;
-  gap:40px;
-  padding:40px;
+  gap:60px;
+  padding:50px;
+  background: #fff;
 }
 
 .icon-box{
@@ -107,29 +126,45 @@ nav ul li{
 }
 
 .icon-box i{
-  font-size:24px;
+  font-size:32px;
   color:#f4b400;
-  margin-bottom:5px;
+  margin-bottom:10px;
 }
 
-/* WORLD SECTION */
+.icon-box p{
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.icon-box span{
+  font-size: 13px;
+  color: #888;
+}
+
+/* ABOUT & EDUCATION SECTION */
 .world{
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:60px;
+  background: #f9f9f9;
 }
 
 .world img{
-  width:420px;
+  width:400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius:10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
 .world-text{
-  max-width:500px;
+  max-width:600px;
 }
 
 .world-text h2{
-  font-size:40px;
+  font-size:36px;
+  margin-top: 0;
 }
 
 .world-text span{
@@ -141,6 +176,18 @@ nav ul li{
   line-height:1.6;
 }
 
+.contact-info {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #444;
+}
+
+.contact-info i {
+  color: #f4b400;
+  margin-right: 8px;
+  width: 20px;
+}
+
 </style>
 
 </head>
@@ -149,71 +196,85 @@ nav ul li{
 
 <!-- NAVBAR -->
 <nav>
-  <h2>Travel</h2>
+  <h2>Hassan Raza</h2>
   <ul>
     <li>Home</li>
-    <li>Destinations</li>
-    <li>About</li>
+    <li>Skills</li>
+    <li>Education</li>
+    <li>Projects</li>
     <li>Contact</li>
   </ul>
 </nav>
 
-<!-- HERO -->
+<!-- HERO SECTION -->
 <section class="hero">
 
   <div class="hero-text">
-    <h2>WELCOME</h2>
-    <h1>I'M TRAVELER</h1>
-
+    <h2>HELLO, WELCOME</h2>
+    <h1>I'M HASSAN RAZA</h1>
     <p>
-      Explore the world with modern travel experiences, amazing destinations, and unforgettable journeys.
+      An AI/ML Engineer, Data Scientist, and Final-year Software Engineering student at QUEST, Nawabshah. 
+      I specialize in Deep Learning, Computer Vision, and Data Analytics, building smart solutions with TensorFlow, Docker, and Power BI.
     </p>
 
-    <button class="btn btn-primary">READ MORE</button>
-    <button class="btn btn-outline">WATCH VIDEO</button>
+    <a href="mailto:hassanrz503@gmail.com" class="btn btn-primary">HIRE ME</a>
+    <button class="btn btn-outline">VIEW PROJECTS</button>
   </div>
 
-  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="travel">
+  <!-- User requested photo replaced here -->
+  <img src="hassan photo.png" alt="Hassan Raza">
 
 </section>
 
-<!-- ICONS -->
+<!-- TECH SKILLS / ICONS SECTION -->
 <section class="icons">
 
   <div class="icon-box">
-    <i class="fa-solid fa-plane"></i>
-    <p>Travel</p>
+    <i class="fa-solid fa-brain"></i>
+    <p>AI & ML</p>
+    <span>TensorFlow, Keras, Scikit-learn</span>
   </div>
 
   <div class="icon-box">
-    <i class="fa-solid fa-hotel"></i>
-    <p>Hotels</p>
+    <i class="fa-solid fa-code"></i>
+    <p>Programming</p>
+    <span>Python, SQL, HTML/CSS</span>
   </div>
 
   <div class="icon-box">
-    <i class="fa-solid fa-map"></i>
-    <p>Guides</p>
+    <i class="fa-solid fa-chart-pie"></i>
+    <p>Analytics</p>
+    <span>Power BI, Streamlit, EDA</span>
   </div>
 
   <div class="icon-box">
-    <i class="fa-solid fa-earth-americas"></i>
-    <p>Explore</p>
+    <i class="fa-cubic-stacked fa-solid fa-box-open"></i>
+    <p>Deployment</p>
+    <span>Docker, Flask, PostgreSQL</span>
   </div>
 
 </section>
 
-<!-- WORLD -->
+<!-- ABOUT & EDUCATION SECTION -->
 <section class="world">
 
-  <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff" alt="world">
+  <!-- User requested photo replaced here too -->
+  <img src="hassan photo.png" alt="Hassan Raza">
 
   <div class="world-text">
-    <h2>DISCOVER THE <span>WORLD</span></h2>
+    <h2>ABOUT <span>MYSELF</span></h2>
     <p>
-      Travel across countries, explore cultures, and see the beauty of nature. Create memories that last forever.
+      Currently pursuing my Bachelor of Engineering in Software Engineering (Expected August 2026). As the General Secretary of the QUEST Software Engineering Society (QSES), I love driving innovation and managing tech communities.
+    </p>
+    <p>
+      From training CNN models with 97% accuracy to building intelligent RAG chatbots and automated ETL pipelines, I enjoy transforming data into actionable insights and intelligent systems.
     </p>
 
-    <button class="btn btn-primary">Explore Now</button>
+    <div class="contact-info">
+      <p><i class="fa-solid fa-envelope"></i> hassanrz503@gmail.com</p>
+      <p><i class="fa-solid fa-phone"></i> +92-315-3727197</p>
+      <p><i class="fa-solid fa-location-dot"></i> Matiari, Sindh, Pakistan</p>
+    </div>
   </div>
 
 </section>
